@@ -1,7 +1,10 @@
 <?php
     $nomeArquivo = "dados.txt";
     $arqAberto = fopen($nomeArquivo, 'r');
-    var_dump($arqAberto);
-    fwrite($arqAberto,"Agora chega!");
+
+    //fwrite($arqAberto,"Agora chega!");
+    $tamanho=filesize($nomeArquivo);
+    $cont = fread($arqAberto, $tamanho);
     fclose($arqAberto);
+    echo $cont;
 ?>
