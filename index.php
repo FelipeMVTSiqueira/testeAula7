@@ -1,6 +1,7 @@
 <?php
     $nomeArquivo = "dados.txt";
-    $arqAberto = fopen($nomeArquivo, 'w');
-    fwrite($arqAberto,"Olá mundo!");
+    $arqAberto = fopen($nomeArquivo, 'r');
+    var_dump($arqAberto);
+    fwrite($arqAberto,"Agora chega!");
     fclose($arqAberto);
 ?>
